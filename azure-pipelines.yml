@@ -2,8 +2,6 @@ trigger: main
 
 pool: vmImage: ubuntu-latest
 
-variables:
-  buildConfiguration: 'Release'
 
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
