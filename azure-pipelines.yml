@@ -1,4 +1,11 @@
-- task: UseDotNet@2
-  inputs:
-    packageType: 'sdk'
-    version: 
+trigger:
+-main
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+  buildConfiguration: 'Release'
+
+steps:
+- script: dotnet build --configuration $(buildConfiguration)
